@@ -1,24 +1,10 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "regions": [
-    "bom1"
-  ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api"
-    }
-  ],
   "headers": [
     {
-      "source": "(.*)",
+      "source": "/api/(.*)",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
           "value": "*"
         },
         {
@@ -26,16 +12,8 @@
           "value": "GET, OPTIONS"
         },
         {
-          "key": "Cache-Control",
-          "value": "s-maxage=300, stale-while-revalidate"
-        },
-        {
-          "key": "Author",
-          "value": "Appujet"
-        },
-        {
-          "key": "Github",
-          "value": "https://github.com/appujet/jiosaavn-plugin-api"
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
         }
       ]
     }
